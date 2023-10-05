@@ -1,7 +1,7 @@
 import pika
 
 # Verbindung zur RabbitMQ-Instanz herstellen
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost', port=5672))
 channel = connection.channel()
 
 # Queue deklarieren, in die die Nachricht gesendet werden soll
