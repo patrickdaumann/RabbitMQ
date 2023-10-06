@@ -13,8 +13,8 @@ message_body = 'Hallo, RabbitMQ!'
 
 # Nachricht in die Queue senden
 channel.basic_publish(exchange='',
-                      routing_key=queue_name,
-                      body=message_body)
+                    routing_key=queue_name,
+                    body=message_body)
 
 print(f" [x] Nachricht gesendet: '{message_body}'")
 
